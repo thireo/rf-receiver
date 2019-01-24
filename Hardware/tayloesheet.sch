@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:rf-receiver-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -51,7 +52,7 @@ U 1 1 58866A67
 P 4450 4875
 F 0 "C52" H 4475 4975 50  0000 L CNN
 F 1 "47uF" H 4475 4775 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4488 4725 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 4488 4725 50  0001 C CNN
 F 3 "" H 4450 4875 50  0000 C CNN
 	1    4450 4875
 	1    0    0    -1  
@@ -647,7 +648,7 @@ U 1 1 5A1CD076
 P 1950 675
 F 0 "J2" H 2049 651 50  0000 L CNN
 F 1 "Conn_Coaxial" H 2049 560 50  0000 L CNN
-F 2 "Connector_Coaxial:SMA_Molex_73251-1153_EdgeMount_Horizontal" H 1950 675 50  0001 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132289_EdgeMount" H 1950 675 50  0001 C CNN
 F 3 "" H 1950 675 50  0001 C CNN
 	1    1950 675 
 	1    0    0    -1  
@@ -775,17 +776,17 @@ $EndComp
 $Comp
 L power:GND #PWR080
 U 1 1 5A247566
-P 5100 1550
-F 0 "#PWR080" H 5100 1300 50  0001 C CNN
-F 1 "GND" H 5105 1377 50  0000 C CNN
-F 2 "" H 5100 1550 50  0001 C CNN
-F 3 "" H 5100 1550 50  0001 C CNN
-	1    5100 1550
+P 4425 1600
+F 0 "#PWR080" H 4425 1350 50  0001 C CNN
+F 1 "GND" H 4430 1427 50  0000 C CNN
+F 2 "" H 4425 1600 50  0001 C CNN
+F 3 "" H 4425 1600 50  0001 C CNN
+	1    4425 1600
 	1    0    0    -1  
 $EndComp
-Text Label 5300 1225 2    60   ~ 0
+Text Label 4250 1475 0    60   ~ 0
 Q_OUT
-Text Label 5300 1125 2    60   ~ 0
+Text Label 4250 1375 0    60   ~ 0
 I_OUT
 $Comp
 L power:PWR_FLAG #FLG07
@@ -1336,10 +1337,6 @@ Wire Wire Line
 Wire Wire Line
 	3350 3090 3350 3110
 Wire Wire Line
-	5025 1225 5300 1225
-Wire Wire Line
-	5025 1125 5300 1125
-Wire Wire Line
 	1950 900  1950 875 
 Wire Wire Line
 	1855 4225 1855 4855
@@ -1374,8 +1371,6 @@ Wire Wire Line
 Connection ~ 7635 4025
 Wire Wire Line
 	7470 3800 7470 3810
-Wire Wire Line
-	5100 1325 5025 1325
 Wire Wire Line
 	2310 4660 2310 4675
 Wire Wire Line
@@ -1555,19 +1550,6 @@ Wire Wire Line
 Wire Wire Line
 	2690 2890 3180 2890
 $Comp
-L Connector:AudioJack3_Ground J6
-U 1 1 5C6F608C
-P 4825 1225
-F 0 "J6" H 4829 1567 50  0000 C CNN
-F 1 "AudioJack3_Ground" H 4829 1476 50  0000 C CNN
-F 2 "" H 4825 1225 50  0001 C CNN
-F 3 "~" H 4825 1225 50  0001 C CNN
-	1    4825 1225
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5100 1325 5100 1550
-$Comp
 L power:+3.3V #PWR?
 U 1 1 5C7774C6
 P 1900 6925
@@ -1687,4 +1669,25 @@ Wire Wire Line
 	1350 7475 1900 7475
 Wire Wire Line
 	1900 6925 1900 7050
+$Comp
+L Connector:Conn_01x05_Female J1
+U 1 1 5C4A7415
+P 4050 1375
+F 0 "J1" H 3944 950 50  0000 C CNN
+F 1 "Conn_01x05_Female" H 3944 1041 50  0000 C CNN
+F 2 "athir:SJ1-35235" H 4050 1375 50  0001 C CNN
+F 3 "~" H 4050 1375 50  0001 C CNN
+	1    4050 1375
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4425 1600 4425 1575
+Wire Wire Line
+	4425 1575 4250 1575
+NoConn ~ 4250 1175
+Wire Wire Line
+	4250 1275 4425 1275
+Wire Wire Line
+	4425 1275 4425 1575
+Connection ~ 4425 1575
 $EndSCHEMATC

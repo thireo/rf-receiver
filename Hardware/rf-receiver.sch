@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:rf-receiver-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -19,7 +20,7 @@ U 1 1 588944E7
 P 3800 1300
 F 0 "C1" H 3810 1370 50  0000 L CNN
 F 1 "15pF" H 3700 1200 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3800 1300 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 3800 1300 50  0001 C CNN
 F 3 "" H 3800 1300 50  0000 C CNN
 	1    3800 1300
 	1    0    0    -1  
@@ -965,14 +966,10 @@ Wire Wire Line
 	4090 1500 4200 1500
 Connection ~ 4200 1500
 Text Label 3890 3850 0    60   ~ 0
-USB/DM
+USB_D-
 Text Label 3890 3950 0    60   ~ 0
-USB/DP
+USB_D+
 NoConn ~ 4400 3650
-Wire Wire Line
-	4400 3750 3890 3750
-Text Label 3890 3750 0    60   ~ 0
-USB/VCC
 NoConn ~ 1200 1300
 NoConn ~ 1200 1400
 NoConn ~ 1200 1500
@@ -1141,7 +1138,7 @@ U 1 1 5C8EADC1
 P 1150 5700
 F 0 "MH1" H 1250 5751 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1250 5660 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 1150 5700 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 1150 5700 50  0001 C CNN
 F 3 "~" H 1150 5700 50  0001 C CNN
 	1    1150 5700
 	1    0    0    -1  
@@ -1152,7 +1149,7 @@ U 1 1 5C8EAE27
 P 1375 5700
 F 0 "MH2" H 1475 5751 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1475 5660 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 1375 5700 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 1375 5700 50  0001 C CNN
 F 3 "~" H 1375 5700 50  0001 C CNN
 	1    1375 5700
 	1    0    0    -1  
@@ -1163,7 +1160,7 @@ U 1 1 5C8EAE79
 P 1600 5700
 F 0 "MH3" H 1700 5751 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1700 5660 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 1600 5700 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 1600 5700 50  0001 C CNN
 F 3 "~" H 1600 5700 50  0001 C CNN
 	1    1600 5700
 	1    0    0    -1  
@@ -1174,7 +1171,7 @@ U 1 1 5C8EAED7
 P 1800 5700
 F 0 "MH4" H 1900 5751 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1900 5660 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_Pad" H 1800 5700 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 1800 5700 50  0001 C CNN
 F 3 "~" H 1800 5700 50  0001 C CNN
 	1    1800 5700
 	1    0    0    -1  
@@ -1211,4 +1208,86 @@ Wire Wire Line
 Wire Wire Line
 	1800 5875 1800 5800
 Connection ~ 1600 5875
+$Comp
+L Connector:USB_B_Micro J3
+U 1 1 5C49A3F1
+P 1275 7075
+F 0 "J3" H 1330 7542 50  0000 C CNN
+F 1 "USB_B_Micro" H 1330 7451 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 1425 7025 50  0001 C CNN
+F 3 "~" H 1425 7025 50  0001 C CNN
+	1    1275 7075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5C49A683
+P 2125 7050
+F 0 "R4" H 2184 7096 50  0000 L CNN
+F 1 "R_Small" H 2184 7005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 2125 7050 50  0001 C CNN
+F 3 "~" H 2125 7050 50  0001 C CNN
+	1    2125 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5C49A709
+P 1900 6875
+F 0 "R3" V 1704 6875 50  0000 C CNN
+F 1 "R_Small" V 1795 6875 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 1900 6875 50  0001 C CNN
+F 3 "~" H 1900 6875 50  0001 C CNN
+	1    1900 6875
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 6875 1575 6875
+Wire Wire Line
+	2000 6875 2125 6875
+Wire Wire Line
+	2125 6875 2125 6950
+$Comp
+L power:GND #PWR0108
+U 1 1 5C4AA3F5
+P 2125 7525
+F 0 "#PWR0108" H 2125 7275 50  0001 C CNN
+F 1 "GND" H 2130 7352 50  0000 C CNN
+F 2 "" H 2125 7525 50  0001 C CNN
+F 3 "" H 2125 7525 50  0001 C CNN
+	1    2125 7525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2125 7525 2125 7500
+Wire Wire Line
+	1275 7475 1275 7500
+Wire Wire Line
+	1275 7500 2125 7500
+Connection ~ 2125 7500
+Wire Wire Line
+	2125 7500 2125 7150
+Wire Wire Line
+	1275 7500 1175 7500
+Wire Wire Line
+	1175 7500 1175 7475
+Connection ~ 1275 7500
+NoConn ~ 1575 7275
+Wire Wire Line
+	1985 7075 1575 7075
+Wire Wire Line
+	1575 7175 1985 7175
+Text Label 1985 7175 2    60   ~ 0
+USB_D-
+Text Label 1985 7075 2    60   ~ 0
+USB_D+
+Text Label 3900 3750 0    60   ~ 0
+USB_VCC
+Wire Wire Line
+	4400 3750 3900 3750
+Text Label 2200 6875 0    60   ~ 0
+USB_VCC
+Wire Wire Line
+	2125 6875 2200 6875
+Connection ~ 2125 6875
 $EndSCHEMATC

@@ -170,7 +170,7 @@ $EndComp
 Wire Wire Line
 	2295 1135 2295 1185
 $Comp
-L Device:C_Small C76
+L Device:CP_Small C76
 U 1 1 5C542B52
 P 3025 4125
 F 0 "C76" H 3117 4171 50  0000 L CNN

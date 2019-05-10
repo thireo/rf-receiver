@@ -1,0 +1,197 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C_Small C1
+U 1 1 5CD3218D
+P 3900 4400
+F 0 "C1" H 3992 4446 50  0000 L CNN
+F 1 "150pF" H 3992 4355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3900 4400 50  0001 C CNN
+F 3 "~" H 3900 4400 50  0001 C CNN
+	1    3900 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5CD346E4
+P 2900 4925
+F 0 "#PWR0101" H 2900 4675 50  0001 C CNN
+F 1 "GND" H 2905 4752 50  0000 C CNN
+F 2 "" H 2900 4925 50  0001 C CNN
+F 3 "" H 2900 4925 50  0001 C CNN
+	1    2900 4925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4300 2900 4725
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 5CD39762
+P 6000 4100
+F 0 "J2" H 6100 4075 50  0000 L CNN
+F 1 "Conn_Coaxial" H 6100 3984 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132289_EdgeMount" H 6000 4100 50  0001 C CNN
+F 3 " ~" H 6000 4100 50  0001 C CNN
+	1    6000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 5CD3A321
+P 2900 4100
+F 0 "J1" H 2828 4338 50  0000 C CNN
+F 1 "Conn_Coaxial" H 2828 4247 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132289_EdgeMount" H 2900 4100 50  0001 C CNN
+F 3 " ~" H 2900 4100 50  0001 C CNN
+	1    2900 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:L_Small L1
+U 1 1 5CD3E1FB
+P 3625 4100
+F 0 "L1" V 3810 4100 50  0000 C CNN
+F 1 "300nH" V 3719 4100 50  0000 C CNN
+F 2 "athir:2222SQ-301" H 3625 4100 50  0001 C CNN
+F 3 "~" H 3625 4100 50  0001 C CNN
+	1    3625 4100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5CD3F4DF
+P 3300 4300
+F 0 "R1" H 3359 4391 50  0000 L CNN
+F 1 "50" H 3359 4300 50  0000 L CNN
+F 2 "" H 3300 4300 50  0001 C CNN
+F 3 "~" H 3300 4300 50  0001 C CNN
+F 4 "Do not" H 3359 4209 50  0000 L CNN "Mount"
+	1    3300 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3525 4100 3300 4100
+Wire Wire Line
+	3300 4200 3300 4100
+Connection ~ 3300 4100
+Wire Wire Line
+	3300 4100 3100 4100
+Wire Wire Line
+	2900 4725 3300 4725
+Connection ~ 2900 4725
+Wire Wire Line
+	2900 4725 2900 4925
+Wire Wire Line
+	6000 4300 6000 4725
+Wire Wire Line
+	3300 4400 3300 4725
+Connection ~ 3300 4725
+Wire Wire Line
+	3300 4725 3900 4725
+Wire Wire Line
+	3900 4300 3900 4100
+Wire Wire Line
+	3900 4100 3725 4100
+Wire Wire Line
+	3900 4500 3900 4725
+Connection ~ 3900 4725
+Wire Wire Line
+	3900 4725 4700 4725
+$Comp
+L Device:C_Small C3
+U 1 1 5CD4189A
+P 5375 4400
+F 0 "C3" H 5467 4446 50  0000 L CNN
+F 1 "150pF" H 5467 4355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5375 4400 50  0001 C CNN
+F 3 "~" H 5375 4400 50  0001 C CNN
+	1    5375 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5375 4300 5375 4100
+Wire Wire Line
+	5375 4500 5375 4725
+Connection ~ 5375 4725
+Wire Wire Line
+	5375 4725 6000 4725
+$Comp
+L Device:C_Small C2
+U 1 1 5CD435C7
+P 4700 4425
+F 0 "C2" H 4792 4471 50  0000 L CNN
+F 1 "180pF" H 4792 4380 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4700 4425 50  0001 C CNN
+F 3 "~" H 4700 4425 50  0001 C CNN
+	1    4700 4425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4525 4700 4725
+Connection ~ 4700 4725
+Wire Wire Line
+	4700 4725 5375 4725
+$Comp
+L Device:L_Small L4
+U 1 1 5CD4408D
+P 5575 4100
+F 0 "L4" V 5760 4100 50  0000 C CNN
+F 1 "300nH" V 5669 4100 50  0000 C CNN
+F 2 "athir:2222SQ-301" H 5575 4100 50  0001 C CNN
+F 3 "~" H 5575 4100 50  0001 C CNN
+	1    5575 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5675 4100 5800 4100
+Wire Wire Line
+	5475 4100 5375 4100
+$Comp
+L Device:L_Small L2
+U 1 1 5CD4502B
+P 4225 4100
+F 0 "L2" V 4410 4100 50  0000 C CNN
+F 1 "560nH" V 4319 4100 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 4225 4100 50  0001 C CNN
+F 3 "~" H 4225 4100 50  0001 C CNN
+	1    4225 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4125 4100 3900 4100
+Connection ~ 3900 4100
+Wire Wire Line
+	4325 4100 4700 4100
+Wire Wire Line
+	4700 4100 4700 4325
+$Comp
+L Device:L_Small L3
+U 1 1 5CD45D27
+P 5025 4100
+F 0 "L3" V 5210 4100 50  0000 C CNN
+F 1 "560nH" V 5119 4100 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 5025 4100 50  0001 C CNN
+F 3 "~" H 5025 4100 50  0001 C CNN
+	1    5025 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4925 4100 4700 4100
+Connection ~ 4700 4100
+Wire Wire Line
+	5125 4100 5375 4100
+Connection ~ 5375 4100
+$EndSCHEMATC

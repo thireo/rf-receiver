@@ -129,7 +129,7 @@
     </param>
     <param>
       <key>label2</key>
-      <value></value>
+      <value>LSB</value>
     </param>
     <param>
       <key>label3</key>
@@ -149,7 +149,7 @@
     </param>
     <param>
       <key>num_opts</key>
-      <value>2</value>
+      <value>3</value>
     </param>
     <param>
       <key>option0</key>
@@ -216,6 +216,69 @@
     </param>
   </block>
   <block>
+    <key>analog_agc2_xx</key>
+    <param>
+      <key>attack_rate</key>
+      <value>100u</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>decay_rate</key>
+      <value>agc_decay</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(816, 468)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>gain</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>analog_agc2_xx_0</value>
+    </param>
+    <param>
+      <key>max_gain</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>reference</key>
+      <value>.3</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+  </block>
+  <block>
     <key>audio_sink</key>
     <param>
       <key>alias</key>
@@ -235,11 +298,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(984, 220)</value>
+      <value>(1016, 160)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -251,7 +314,7 @@
     </param>
     <param>
       <key>num_inputs</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>ok_to_block</key>
@@ -290,7 +353,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>fir_filter_fff</value>
+      <value>fir_filter_ccf</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -369,7 +432,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>fir_filter_fff</value>
+      <value>fir_filter_ccc</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -385,7 +448,7 @@
     </param>
     <param>
       <key>high_cutoff_freq</key>
-      <value>3400</value>
+      <value>5000</value>
     </param>
     <param>
       <key>id</key>
@@ -397,7 +460,7 @@
     </param>
     <param>
       <key>low_cutoff_freq</key>
-      <value>300</value>
+      <value>500</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -413,7 +476,86 @@
     </param>
     <param>
       <key>width</key>
-      <value>50</value>
+      <value>100</value>
+    </param>
+    <param>
+      <key>win</key>
+      <value>firdes.WIN_HAMMING</value>
+    </param>
+  </block>
+  <block>
+    <key>band_pass_filter</key>
+    <param>
+      <key>beta</key>
+      <value>6.76</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>decim</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>fir_filter_ccc</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(288, 492)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>gain</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>high_cutoff_freq</key>
+      <value>-500</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>band_pass_filter_0_0_0</value>
+    </param>
+    <param>
+      <key>interp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>low_cutoff_freq</key>
+      <value>-5000</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>width</key>
+      <value>100</value>
     </param>
     <param>
       <key>win</key>
@@ -440,7 +582,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(776, 72)</value>
+      <value>(776, 40)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -464,7 +606,7 @@
     </param>
     <param>
       <key>num_inputs</key>
-      <value>2</value>
+      <value>3</value>
     </param>
     <param>
       <key>num_outputs</key>
@@ -476,7 +618,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>float</value>
+      <value>complex</value>
     </param>
     <param>
       <key>vlen</key>
@@ -484,7 +626,50 @@
     </param>
   </block>
   <block>
-    <key>blocks_add_xx</key>
+    <key>blocks_complex_to_float</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(768, 160)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_complex_to_float_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_float_to_complex</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -503,7 +688,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(336, 304)</value>
+      <value>(224, 304)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -511,11 +696,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>blocks_add_xx_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
+      <value>blocks_float_to_complex_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -524,10 +705,6 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>2</value>
     </param>
     <param>
       <key>vlen</key>
@@ -535,14 +712,14 @@
     </param>
   </block>
   <block>
-    <key>low_pass_filter</key>
-    <param>
-      <key>beta</key>
-      <value>6.76</value>
-    </param>
+    <key>freq_xlating_fir_filter_xxx</key>
     <param>
       <key>alias</key>
       <value></value>
+    </param>
+    <param>
+      <key>center_freq</key>
+      <value>-5000</value>
     </param>
     <param>
       <key>comment</key>
@@ -553,40 +730,24 @@
       <value></value>
     </param>
     <param>
-      <key>cutoff_freq</key>
-      <value>20e3</value>
-    </param>
-    <param>
       <key>decim</key>
       <value>1</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>fir_filter_fff</value>
+      <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(272, 508)</value>
+      <value>(512, 556)</value>
     </param>
     <param>
       <key>_rotation</key>
       <value>0</value>
     </param>
     <param>
-      <key>gain</key>
-      <value>1</value>
-    </param>
-    <param>
       <key>id</key>
-      <value>low_pass_filter_1</value>
-    </param>
-    <param>
-      <key>interp</key>
-      <value>1</value>
+      <value>freq_xlating_fir_filter_xxx_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -601,87 +762,12 @@
       <value>samp_rate</value>
     </param>
     <param>
-      <key>width</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>win</key>
-      <value>firdes.WIN_HAMMING</value>
-    </param>
-  </block>
-  <block>
-    <key>low_pass_filter</key>
-    <param>
-      <key>beta</key>
-      <value>6.76</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>cutoff_freq</key>
-      <value>10e3</value>
-    </param>
-    <param>
-      <key>decim</key>
+      <key>taps</key>
       <value>1</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
     </param>
     <param>
       <key>type</key>
-      <value>fir_filter_fff</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(824, 588)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>low_pass_filter_1_0</value>
-    </param>
-    <param>
-      <key>interp</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>width</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>win</key>
-      <value>firdes.WIN_HAMMING</value>
+      <value>ccc</value>
     </param>
   </block>
   <block>
@@ -787,7 +873,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(736, 244)</value>
+      <value>(984, 244)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1086,7 +1172,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(968, 124)</value>
+      <value>(984, 52)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1310,7 +1396,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>float</value>
+      <value>complex</value>
     </param>
     <param>
       <key>update_time</key>
@@ -1345,7 +1431,7 @@
     </param>
     <param>
       <key>bw</key>
-      <value>44100/2</value>
+      <value>44100</value>
     </param>
     <param>
       <key>alias</key>
@@ -1353,7 +1439,7 @@
     </param>
     <param>
       <key>fc</key>
-      <value>0</value>
+      <value>22050</value>
     </param>
     <param>
       <key>comment</key>
@@ -1373,7 +1459,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(736, 328)</value>
+      <value>(992, 332)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1393,11 +1479,11 @@
     </param>
     <param>
       <key>int_max</key>
-      <value>-10</value>
+      <value>-20</value>
     </param>
     <param>
       <key>int_min</key>
-      <value>-70</value>
+      <value>-90</value>
     </param>
     <param>
       <key>legend</key>
@@ -1549,15 +1635,15 @@
     </param>
     <param>
       <key>type</key>
-      <value>float</value>
+      <value>complex</value>
     </param>
     <param>
       <key>update_time</key>
-      <value>0.10</value>
+      <value>0.05</value>
     </param>
     <param>
       <key>wintype</key>
-      <value>firdes.WIN_BLACKMAN_hARRIS</value>
+      <value>firdes.WIN_HAMMING</value>
     </param>
   </block>
   <connection>
@@ -1573,8 +1659,14 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>band_pass_filter_0_0_0</source_block_id>
+    <sink_block_id>freq_xlating_fir_filter_xxx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blks2_selector_0</source_block_id>
-    <sink_block_id>audio_sink_0</sink_block_id>
+    <sink_block_id>blocks_complex_to_float_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1585,38 +1677,56 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_add_xx_0</source_block_id>
+    <source_block_id>blocks_complex_to_float_0</source_block_id>
+    <sink_block_id>audio_sink_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_complex_to_float_0</source_block_id>
+    <sink_block_id>audio_sink_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_float_to_complex_0</source_block_id>
     <sink_block_id>band_pass_filter_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_add_xx_0</source_block_id>
+    <source_block_id>blocks_float_to_complex_0</source_block_id>
     <sink_block_id>band_pass_filter_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_add_xx_0</source_block_id>
-    <sink_block_id>qtgui_freq_sink_x_0</sink_block_id>
+    <source_block_id>blocks_float_to_complex_0</source_block_id>
+    <sink_block_id>band_pass_filter_0_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_add_xx_0</source_block_id>
+    <source_block_id>blocks_float_to_complex_0</source_block_id>
     <sink_block_id>qtgui_waterfall_sink_x_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>freq_xlating_fir_filter_xxx_0</source_block_id>
+    <sink_block_id>blks2_selector_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>2</sink_key>
+  </connection>
+  <connection>
     <source_block_id>pulse_monitor</source_block_id>
-    <sink_block_id>blocks_add_xx_0</sink_block_id>
+    <sink_block_id>blocks_float_to_complex_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>pulse_monitor</source_block_id>
-    <sink_block_id>blocks_add_xx_0</sink_block_id>
+    <sink_block_id>blocks_float_to_complex_0</sink_block_id>
     <source_key>1</source_key>
     <sink_key>1</sink_key>
   </connection>

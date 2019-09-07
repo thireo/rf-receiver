@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:rf-receiver-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 5 6
 Title ""
 Date ""
 Rev ""
@@ -67,7 +67,7 @@ Wire Wire Line
 	3750 3400 3550 3400
 Wire Wire Line
 	2900 3500 3350 3500
-Text HLabel 2900 3700 0    60   Input ~ 0
+Text HLabel 2900 3600 0    60   Input ~ 0
 MCU_RESET
 Text HLabel 2900 3500 0    60   Input ~ 0
 SWCLK
@@ -132,6 +132,8 @@ $Comp
 L fpc_conn:FPC_6POS CON1
 U 1 1 5C507911
 P 4200 3800
+AR Path="/5C507911" Ref="CON1"  Part="1" 
+AR Path="/58895F8E/5C507911" Ref="CON1"  Part="1" 
 F 0 "CON1" H 4277 4103 60  0000 L CNN
 F 1 "FPC_6POS" H 4277 3997 60  0000 L CNN
 F 2 "FPC_conn:HFW6R_2STE1LF" H 4200 3800 60  0001 C CNN
@@ -159,7 +161,7 @@ Wire Wire Line
 	3675 3800 3675 4100
 Wire Wire Line
 	3750 2750 3750 3300
-Text HLabel 2900 3600 0    61   Input ~ 0
+Text HLabel 2900 3700 0    61   Input ~ 0
 UART_TX
 Wire Wire Line
 	2900 3600 3750 3600

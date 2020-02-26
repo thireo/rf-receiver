@@ -22,13 +22,13 @@ Text HLabel 4900 5100 0    60   Input ~ 0
 LCD_RW
 Text HLabel 4900 5200 0    60   Input ~ 0
 LCD_EN
-Text HLabel 6100 2775 2    60   Input ~ 0
+Text HLabel 8800 2650 2    60   Input ~ 0
 LCD_D0
-Text HLabel 6100 2675 2    60   Input ~ 0
+Text HLabel 8800 2550 2    60   Input ~ 0
 LCD_D1
-Text HLabel 6100 2575 2    60   Input ~ 0
+Text HLabel 8800 2450 2    60   Input ~ 0
 LCD_D2
-Text HLabel 6100 2475 2    60   Input ~ 0
+Text HLabel 8800 2350 2    60   Input ~ 0
 LCD_D3
 Text HLabel 4900 5300 0    60   Input ~ 0
 LCD_D4
@@ -134,24 +134,24 @@ NoConn ~ 5675 3500
 NoConn ~ 5675 3600
 NoConn ~ 5675 3700
 Wire Wire Line
-	6100 2475 5925 2475
+	8800 2350 8625 2350
 Wire Wire Line
-	6100 2575 5925 2575
+	8800 2450 8625 2450
 Wire Wire Line
-	6100 2675 5925 2675
+	8800 2550 8625 2550
 Wire Wire Line
-	6100 2775 5925 2775
-NoConn ~ 5925 2475
-NoConn ~ 5925 2575
-NoConn ~ 5925 2675
-NoConn ~ 5925 2775
+	8800 2650 8625 2650
+NoConn ~ 8625 2350
+NoConn ~ 8625 2450
+NoConn ~ 8625 2550
+NoConn ~ 8625 2650
 $Comp
 L athir:RC1602A U2
 U 1 1 59DC759C
 P 5275 3500
 F 0 "U2" H 5025 4150 50  0000 C CNN
 F 1 "RC1602A" H 5385 4150 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical" H 5375 2700 50  0001 C CNN
+F 2 "Connector_FFC-FPC:Hirose_FH12-16S-0.5SH_1x16-1MP_P0.50mm_Horizontal" H 5375 2700 50  0001 C CNN
 F 3 "" H 5375 3400 50  0001 C CNN
 	1    5275 3500
 	-1   0    0    1   

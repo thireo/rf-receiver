@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 5 6
 Title ""
 Date ""
 Rev ""
@@ -132,6 +132,8 @@ $Comp
 L fpc_conn:FPC_6POS CON1
 U 1 1 5C507911
 P 4200 3800
+AR Path="/5C507911" Ref="CON1"  Part="1" 
+AR Path="/58895F8E/5C507911" Ref="CON1"  Part="1" 
 F 0 "CON1" H 4277 4103 60  0000 L CNN
 F 1 "FPC_6POS" H 4277 3997 60  0000 L CNN
 F 2 "FPC_conn:HFW6R_2STE1LF" H 4200 3800 60  0001 C CNN

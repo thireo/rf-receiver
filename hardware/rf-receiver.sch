@@ -598,7 +598,7 @@ Wire Wire Line
 	10325 5575 10075 5575
 Connection ~ 10075 5575
 Wire Wire Line
-	8900 1075 9250 1075
+	8900 1075 9150 1075
 Wire Wire Line
 	9250 1075 9250 1100
 Wire Wire Line
@@ -1334,4 +1334,44 @@ Wire Wire Line
 	4005 6935 4005 6975
 Wire Wire Line
 	4835 6710 4835 6830
+$Comp
+L Connector:TestPoint TP16
+U 1 1 5E57B516
+P 9150 975
+F 0 "TP16" H 9208 1093 50  0000 L CNN
+F 1 "TestPoint" H 9208 1002 50  0000 L CNN
+F 2 "athir:testpoint_probe" H 9350 975 50  0001 C CNN
+F 3 "~" H 9350 975 50  0001 C CNN
+	1    9150 975 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 975  9150 1075
+Connection ~ 9150 1075
+Wire Wire Line
+	9150 1075 9250 1075
+$Comp
+L Connector:TestPoint TP17
+U 1 1 5E58AEC5
+P 9150 1375
+F 0 "TP17" H 9208 1493 50  0000 L CNN
+F 1 "TestPoint" H 9208 1402 50  0000 L CNN
+F 2 "athir:testpoint_probe" H 9350 1375 50  0001 C CNN
+F 3 "~" H 9350 1375 50  0001 C CNN
+	1    9150 1375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5E58B9E2
+P 9150 1450
+F 0 "#PWR03" H 9150 1200 50  0001 C CNN
+F 1 "GND" H 9155 1277 50  0000 C CNN
+F 2 "" H 9150 1450 50  0001 C CNN
+F 3 "" H 9150 1450 50  0001 C CNN
+	1    9150 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 1450 9150 1375
 $EndSCHEMATC

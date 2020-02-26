@@ -37,7 +37,6 @@ int main (void)
 	delay_init();
 	
 	ad9851_init();
-		
 	int counter = 54000000;
 	int step = 1;
 	char buffer[32];

@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:rf-receiver-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 2 3
 Title "Tayloe Detector"
 Date "2017-03-29"
 Rev "Rev 1"
@@ -51,8 +51,8 @@ L Device:CP C52
 U 1 1 58866A67
 P 4450 4875
 F 0 "C52" H 4475 4975 50  0000 L CNN
-F 1 "47uF" H 4475 4775 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 4488 4725 50  0001 C CNN
+F 1 "22uF" H 4475 4775 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4488 4725 50  0001 C CNN
 F 3 "" H 4450 4875 50  0000 C CNN
 	1    4450 4875
 	1    0    0    -1  
@@ -85,7 +85,7 @@ U 1 1 58946947
 P 3165 3440
 F 0 "IC3" H 3965 3690 60  0000 C CNN
 F 1 "74LVC74ABQ" H 3765 4490 60  0000 C CNN
-F 2 "Package_DFN_QFN:DFN-12-1EP_3x4mm_P0.5mm_EP1.7x3.3mm" H 3765 3990 60  0001 C CNN
+F 2 "athir:DHVQFN14" H 3765 3990 60  0001 C CNN
 F 3 "" H 3765 3990 60  0000 C CNN
 	1    3165 3440
 	1    0    0    -1  
@@ -146,7 +146,7 @@ U 1 1 5896B374
 P 8555 4560
 F 0 "U9" H 8505 4110 50  0000 C CNN
 F 1 "74CBTLV3253" H 8255 5310 50  0000 C CNN
-F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 9715 3860 50  0001 C CNN
+F 2 "athir:PVQFN16" H 9715 3860 50  0001 C CNN
 F 3 "" H 9715 3860 50  0000 C CNN
 	1    8555 4560
 	1    0    0    -1  
@@ -252,8 +252,8 @@ L Amplifier_Operational:NE5532 U8
 U 2 1 58E53D59
 P 7675 1150
 F 0 "U8" H 7850 1100 50  0000 L CNN
-F 1 "NE5532" H 7675 950 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7675 1150 50  0001 C CNN
+F 1 "OPA167B-DRG" H 6800 1475 50  0000 L CNN
+F 2 "Package_SON:SON-8-1EP_3x2mm_P0.5mm_EP1.4x1.6mm" H 7675 1150 50  0001 C CNN
 F 3 "" H 7675 1150 50  0001 C CNN
 	2    7675 1150
 	1    0    0    -1  
@@ -263,8 +263,8 @@ L Amplifier_Operational:NE5532 U8
 U 1 1 58E53DCA
 P 9700 1175
 F 0 "U8" H 9700 1375 50  0000 L CNN
-F 1 "NE5532" H 9700 975 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9700 1175 50  0001 C CNN
+F 1 "OPA167B-DRG" H 9700 975 50  0000 L CNN
+F 2 "Package_SON:SON-8-1EP_3x2mm_P0.5mm_EP1.4x1.6mm" H 9700 1175 50  0001 C CNN
 F 3 "" H 9700 1175 50  0001 C CNN
 	1    9700 1175
 	1    0    0    -1  
@@ -288,10 +288,6 @@ F 3 "" H 7575 1725 50  0001 C CNN
 	1    7575 1725
 	0    1    1    0   
 $EndComp
-Text Label 8325 1150 2    60   ~ 0
-I_OUT
-Text Label 10350 1175 2    60   ~ 0
-Q_OUT
 Text Notes 7120 580  0    60   ~ 0
 Low Noise Post Detector Baseband Summer and Preamplifiers
 Text Notes 7470 3505 0    60   ~ 0
@@ -302,7 +298,7 @@ U 1 1 58E6B4EC
 P 5510 4010
 F 0 "C56" H 5520 4080 50  0000 L CNN
 F 1 "10uF" H 5520 3930 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5510 4010 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_4x5.4" H 5510 4010 50  0001 C CNN
 F 3 "" H 5510 4010 50  0001 C CNN
 	1    5510 4010
 	1    0    0    -1  
@@ -335,39 +331,6 @@ F 1 "GND" H 7755 3895 50  0000 C CNN
 F 2 "" H 7755 4045 50  0001 C CNN
 F 3 "" H 7755 4045 50  0001 C CNN
 	1    7755 4045
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR056
-U 1 1 58EB5681
-P 1160 1450
-F 0 "#PWR056" H 1160 1200 50  0001 C CNN
-F 1 "GND" H 1160 1300 50  0000 C CNN
-F 2 "" H 1160 1450 50  0001 C CNN
-F 3 "" H 1160 1450 50  0001 C CNN
-	1    1160 1450
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG06
-U 1 1 58EB66B6
-P 760 1600
-F 0 "#FLG06" H 760 1675 50  0001 C CNN
-F 1 "PWR_FLAG" H 760 1750 50  0000 C CNN
-F 2 "" H 760 1600 50  0001 C CNN
-F 3 "" H 760 1600 50  0001 C CNN
-	1    760  1600
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+12V #PWR053
-U 1 1 58EB676B
-P 760 1440
-F 0 "#PWR053" H 760 1290 50  0001 C CNN
-F 1 "+12V" H 760 1580 50  0000 C CNN
-F 2 "" H 760 1440 50  0001 C CNN
-F 3 "" H 760 1440 50  0001 C CNN
-	1    760  1440
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -415,17 +378,6 @@ F 3 "" H 7570 2125 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R30
-U 1 1 5A1D0CE2
-P 7575 1925
-F 0 "R30" V 7525 2025 50  0000 L CNN
-F 1 "10kohm" V 7650 1775 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7575 1925 50  0001 C CNN
-F 3 "" H 7575 1925 50  0001 C CNN
-	1    7575 1925
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R_Small R31
 U 1 1 5A20AAE3
 P 9650 1750
@@ -445,17 +397,6 @@ F 1 "0.8nF" V 9610 2175 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 9650 2150 50  0001 C CNN
 F 3 "" H 9650 2150 50  0001 C CNN
 	1    9650 2150
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R32
-U 1 1 5A20AAF7
-P 9650 1950
-F 0 "R32" V 9600 2050 50  0000 L CNN
-F 1 "10kohm" V 9725 1800 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 9650 1950 50  0001 C CNN
-F 3 "" H 9650 1950 50  0001 C CNN
-	1    9650 1950
 	0    1    1    0   
 $EndComp
 $Comp
@@ -615,7 +556,7 @@ U 1 1 5A1CAF1F
 P 7140 4180
 F 0 "TP5" H 7080 4410 50  0000 L CNN
 F 1 "LO_A" H 7035 4200 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7340 4180 50  0001 C CNN
+F 2 "athir:testpoint_probe" H 7340 4180 50  0001 C CNN
 F 3 "~" H 7340 4180 50  0001 C CNN
 	1    7140 4180
 	1    0    0    -1  
@@ -626,7 +567,7 @@ U 1 1 5A1CB6F8
 P 7315 4185
 F 0 "TP8" H 7250 4420 50  0000 L CNN
 F 1 "LO_B" H 7215 4210 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7515 4185 50  0001 C CNN
+F 2 "athir:testpoint_probe" H 7515 4185 50  0001 C CNN
 F 3 "~" H 7515 4185 50  0001 C CNN
 	1    7315 4185
 	1    0    0    -1  
@@ -763,23 +704,12 @@ F 3 "" H 9340 4945 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG07
-U 1 1 5A3481F9
-P 1160 1680
-F 0 "#FLG07" H 1160 1755 50  0001 C CNN
-F 1 "PWR_FLAG" H 1160 1853 50  0000 C CNN
-F 2 "" H 1160 1680 50  0001 C CNN
-F 3 "" H 1160 1680 50  0001 C CNN
-	1    1160 1680
-	-1   0    0    1   
-$EndComp
-$Comp
 L Connector:TestPoint TP3
 U 1 1 5A2C809A
 P 2930 3920
 F 0 "TP3" H 2988 4040 50  0000 L CNN
 F 1 "GND" H 2988 3949 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3130 3920 50  0001 C CNN
+F 2 "athir:testpoint_probe" H 3130 3920 50  0001 C CNN
 F 3 "~" H 3130 3920 50  0001 C CNN
 	1    2930 3920
 	1    0    0    -1  
@@ -790,7 +720,7 @@ U 1 1 5A2C80A0
 P 3175 3920
 F 0 "TP4" H 3233 4040 50  0000 L CNN
 F 1 "RF_BUFFERED" H 3233 3949 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3375 3920 50  0001 C CNN
+F 2 "athir:testpoint_probe" H 3375 3920 50  0001 C CNN
 F 3 "~" H 3375 3920 50  0001 C CNN
 	1    3175 3920
 	1    0    0    -1  
@@ -812,7 +742,7 @@ U 1 1 5A30A47A
 P 7145 4790
 F 0 "TP7" H 7203 4910 50  0000 L CNN
 F 1 "RF_A" V 7180 4700 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7345 4790 50  0001 C CNN
+F 2 "athir:testpoint_probe" H 7345 4790 50  0001 C CNN
 F 3 "~" H 7345 4790 50  0001 C CNN
 	1    7145 4790
 	0    -1   -1   0   
@@ -823,7 +753,7 @@ U 1 1 5A30A480
 P 7145 4545
 F 0 "TP6" H 7203 4665 50  0000 L CNN
 F 1 "RF_B" V 7180 4450 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7345 4545 50  0001 C CNN
+F 2 "athir:testpoint_probe" H 7345 4545 50  0001 C CNN
 F 3 "~" H 7345 4545 50  0001 C CNN
 	1    7145 4545
 	0    -1   -1   0   
@@ -981,7 +911,7 @@ Wire Wire Line
 Wire Wire Line
 	7855 4810 7780 4810
 Wire Wire Line
-	7780 4810 7780 4910
+	7780 4810 7780 4880
 Wire Wire Line
 	7780 4910 7855 4910
 Wire Wire Line
@@ -1095,8 +1025,6 @@ Wire Wire Line
 Connection ~ 4315 2365
 Connection ~ 4465 2365
 Wire Wire Line
-	1160 1450 1160 1680
-Wire Wire Line
 	7575 850  7695 850 
 Wire Wire Line
 	7940 850  8045 850 
@@ -1104,10 +1032,6 @@ Wire Wire Line
 	7250 2125 7470 2125
 Connection ~ 7250 1725
 Connection ~ 8050 1725
-Wire Wire Line
-	7475 1925 7250 1925
-Wire Wire Line
-	7675 1925 8050 1925
 Wire Wire Line
 	9325 1275 9325 1750
 Wire Wire Line
@@ -1122,12 +1046,6 @@ Connection ~ 9325 1750
 Wire Wire Line
 	10125 2150 9750 2150
 Connection ~ 10125 1750
-Wire Wire Line
-	9550 1950 9325 1950
-Connection ~ 9325 1950
-Wire Wire Line
-	9750 1950 10125 1950
-Connection ~ 10125 1950
 Connection ~ 10125 1175
 Connection ~ 9325 1275
 Wire Notes Line
@@ -1216,7 +1134,6 @@ Wire Wire Line
 Connection ~ 7250 2125
 Wire Wire Line
 	7670 2125 8050 2125
-Connection ~ 8050 1925
 Connection ~ 8050 2125
 Wire Wire Line
 	9550 2315 9325 2315
@@ -1224,7 +1141,6 @@ Connection ~ 9325 2150
 Wire Wire Line
 	9750 2315 10125 2315
 Connection ~ 10125 2150
-Connection ~ 7250 1925
 Wire Wire Line
 	8015 705  8045 705 
 Wire Wire Line
@@ -1235,10 +1151,6 @@ Wire Wire Line
 Wire Wire Line
 	7695 705  7695 850 
 Connection ~ 7695 850 
-Wire Wire Line
-	760  1440 760  1600
-Wire Wire Line
-	1885 4935 1885 5060
 Connection ~ 1885 4935
 Wire Wire Line
 	1895 4655 1895 4890
@@ -1395,23 +1307,11 @@ Wire Wire Line
 Wire Wire Line
 	4465 2365 4465 2390
 Wire Wire Line
-	7250 1725 7250 1925
-Wire Wire Line
-	8050 1725 8050 1925
-Wire Wire Line
-	9325 1750 9325 1950
-Wire Wire Line
-	10125 1750 10125 1950
-Wire Wire Line
-	9325 1950 9325 2150
-Wire Wire Line
-	10125 1950 10125 2150
-Wire Wire Line
 	10125 1175 10350 1175
 Wire Wire Line
 	9325 1275 9400 1275
 Wire Wire Line
-	5810 3885 6010 3885
+	5810 3885 5975 3885
 Wire Wire Line
 	1760 4260 1895 4260
 Wire Wire Line
@@ -1435,15 +1335,11 @@ Wire Wire Line
 Wire Wire Line
 	7250 2125 7250 2310
 Wire Wire Line
-	8050 1925 8050 2125
-Wire Wire Line
 	8050 2125 8050 2310
 Wire Wire Line
 	9325 2150 9325 2315
 Wire Wire Line
 	10125 2150 10125 2315
-Wire Wire Line
-	7250 1925 7250 2125
 Wire Wire Line
 	8045 850  8225 850 
 Wire Wire Line
@@ -1495,8 +1391,8 @@ L Amplifier_Operational:NE5532 U8
 U 3 1 5C5651A2
 P 7675 1150
 F 0 "U8" H 7725 1035 50  0000 L CNN
-F 1 "NE5532" H 7675 950 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7675 1150 50  0001 C CNN
+F 1 "OPA167B-DRG" H 7675 900 50  0000 L CNN
+F 2 "Package_SON:SON-8-1EP_3x2mm_P0.5mm_EP1.4x1.6mm" H 7675 1150 50  0001 C CNN
 F 3 "" H 7675 1150 50  0001 C CNN
 	3    7675 1150
 	1    0    0    -1  
@@ -1504,39 +1400,8 @@ $EndComp
 Connection ~ 7575 850 
 Text HLabel 2690 2890 0    50   Input ~ 0
 LO_IN
-Text HLabel 2690 3015 0    50   Input ~ 0
-GND_IN
-$Comp
-L power:GND #PWR082
-U 1 1 5C5D35D4
-P 2790 3115
-F 0 "#PWR082" H 2790 2865 50  0001 C CNN
-F 1 "GND" H 2795 2942 50  0000 C CNN
-F 2 "" H 2790 3115 50  0001 C CNN
-F 3 "" H 2790 3115 50  0001 C CNN
-	1    2790 3115
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2790 3115 2790 3015
-Wire Wire Line
-	2790 3015 2690 3015
 Wire Wire Line
 	2690 2890 3180 2890
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5C7774C6
-P 1900 6925
-AR Path="/5C7774C6" Ref="#PWR?"  Part="1" 
-AR Path="/5C517D7D/5C7774C6" Ref="#PWR?"  Part="1" 
-AR Path="/5C4FD13D/5C7774C6" Ref="#PWR0109"  Part="1" 
-F 0 "#PWR0109" H 1900 6775 50  0001 C CNN
-F 1 "+3.3V" H 1900 7065 50  0000 C CNN
-F 2 "" H 1900 6925 50  0000 C CNN
-F 3 "" H 1900 6925 50  0000 C CNN
-	1    1900 6925
-	1    0    0    -1  
-$EndComp
 $Comp
 L Regulator_Linear:MIC5504-3.3YM5 U?
 U 1 1 5C7774CC
@@ -1572,7 +1437,7 @@ AR Path="/5C7774DA" Ref="C?"  Part="1"
 AR Path="/5C517D7D/5C7774DA" Ref="C?"  Part="1" 
 AR Path="/5C4FD13D/5C7774DA" Ref="C44"  Part="1" 
 F 0 "C44" H 785 7345 50  0000 L CNN
-F 1 "100nF" H 785 7195 50  0000 L CNN
+F 1 "10uF" H 785 7195 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 775 7275 50  0001 C CNN
 F 3 "" H 775 7275 50  0000 C CNN
 	1    775  7275
@@ -1621,8 +1486,6 @@ Wire Wire Line
 	1225 7475 1225 7525
 Wire Wire Line
 	775  7050 875  7050
-Wire Wire Line
-	1750 7050 1900 7050
 Connection ~ 1900 7050
 Wire Wire Line
 	775  6955 775  7050
@@ -1641,8 +1504,6 @@ Wire Wire Line
 Connection ~ 1350 7475
 Wire Wire Line
 	1350 7475 1900 7475
-Wire Wire Line
-	1900 6925 1900 7050
 $Comp
 L power:-12V #PWR0118
 U 1 1 5D91C97B
@@ -1714,4 +1575,140 @@ Wire Wire Line
 Connection ~ 8250 1625
 Text Notes 9300 2850 0    50   ~ 0
 OPA2211AIDRGT\nWSON-8\n1.1nV\nmindre footprint\n9,95 €
+$Comp
+L Device:C_Small C?
+U 1 1 5DB88EF2
+P 2125 7275
+AR Path="/5DB88EF2" Ref="C?"  Part="1" 
+AR Path="/5C517D7D/5DB88EF2" Ref="C?"  Part="1" 
+AR Path="/5C4FD13D/5DB88EF2" Ref="C21"  Part="1" 
+F 0 "C21" H 2135 7345 50  0000 L CNN
+F 1 "100nF" H 2135 7195 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2125 7275 50  0001 C CNN
+F 3 "" H 2125 7275 50  0000 C CNN
+	1    2125 7275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2125 7175 2125 7050
+Wire Wire Line
+	2125 7050 1900 7050
+Wire Wire Line
+	2125 7375 2125 7475
+Wire Wire Line
+	2125 7475 1900 7475
+Connection ~ 1900 7475
+Text Notes 8450 900  0    50   ~ 0
+OPA1678 DRG - SON-8\nPin compatible.\nhttp://www.ti.com/lit/ds/symlink/opa1678.pdf
+$Comp
+L Device:RF_Shield_One_Piece J5
+U 1 1 5DDA179E
+P 2225 5875
+F 0 "J5" H 1595 5772 50  0000 R CNN
+F 1 "RF_Shield_One_Piece" H 1595 5863 50  0000 R CNN
+F 2 "RF_Shielding:Laird_Technologies_BMI-S-102_16.50x16.50mm" H 2225 5775 50  0001 C CNN
+F 3 "~" H 2225 5775 50  0001 C CNN
+	1    2225 5875
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2225 5475 2225 5025
+Wire Wire Line
+	1885 4935 1885 5025
+Wire Wire Line
+	1885 5025 2225 5025
+Connection ~ 1885 5025
+Wire Wire Line
+	1885 5025 1885 5060
+$Comp
+L Device:RF_Shield_One_Piece J6
+U 1 1 5DDCB769
+P 6200 1625
+F 0 "J6" V 6967 1568 50  0000 C CNN
+F 1 "RF_Shield_One_Piece" V 6876 1568 50  0000 C CNN
+F 2 "RF_Shielding:Laird_Technologies_BMI-S-101_13.66x12.70mm" H 6200 1525 50  0001 C CNN
+F 3 "~" H 6200 1525 50  0001 C CNN
+	1    6200 1625
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6600 1625 6850 1625
+Wire Wire Line
+	6850 1625 6850 1725
+$Comp
+L power:GND #PWR0117
+U 1 1 5DDE778D
+P 6850 1725
+F 0 "#PWR0117" H 6850 1475 50  0001 C CNN
+F 1 "GND" H 6855 1552 50  0000 C CNN
+F 2 "" H 6850 1725 50  0001 C CNN
+F 3 "" H 6850 1725 50  0001 C CNN
+	1    6850 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:RF_Shield_One_Piece J7
+U 1 1 5DDE8739
+P 7475 5475
+F 0 "J7" H 6845 5372 50  0000 R CNN
+F 1 "RF_Shield_One_Piece" H 6845 5463 50  0000 R CNN
+F 2 "RF_Shielding:Laird_Technologies_BMI-S-102_16.50x16.50mm" H 7475 5375 50  0001 C CNN
+F 3 "~" H 7475 5375 50  0001 C CNN
+	1    7475 5475
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7475 5075 7475 4850
+Wire Wire Line
+	7475 4850 7782 4850
+Wire Wire Line
+	7782 4850 7782 4880
+Wire Wire Line
+	7782 4880 7780 4880
+Connection ~ 7780 4880
+Wire Wire Line
+	7780 4880 7780 4910
+Wire Wire Line
+	7250 1725 7250 2125
+Wire Wire Line
+	8050 1725 8050 2125
+Wire Wire Line
+	9325 1750 9325 2150
+Wire Wire Line
+	10125 1750 10125 2150
+Text HLabel 10350 1175 2    50   Input ~ 0
+Q_OUT
+Text HLabel 8325 1150 2    50   Input ~ 0
+I_OUT
+Wire Wire Line
+	1750 7050 1900 7050
+Wire Wire Line
+	1900 6925 1900 7050
+$Comp
+L power:+3.3V #PWR0109
+U 1 1 5D893D84
+P 1900 6925
+F 0 "#PWR0109" H 1900 6775 50  0001 C CNN
+F 1 "+3.3V" H 1915 7098 50  0000 C CNN
+F 2 "" H 1900 6925 50  0001 C CNN
+F 3 "" H 1900 6925 50  0001 C CNN
+	1    1900 6925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5DB534B9
+P 5975 3825
+F 0 "TP1" H 6033 3945 50  0000 L CNN
+F 1 "RF_DC_BIAS" H 5755 4010 50  0000 L CNN
+F 2 "athir:testpoint_probe" H 6175 3825 50  0001 C CNN
+F 3 "~" H 6175 3825 50  0001 C CNN
+	1    5975 3825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5975 3825 5975 3885
+Connection ~ 5975 3885
+Wire Wire Line
+	5975 3885 6010 3885
 $EndSCHEMATC

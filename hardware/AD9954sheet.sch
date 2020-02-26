@@ -579,8 +579,6 @@ Text HLabel 3300 1900 1    60   Input ~ 0
 PS1
 Text HLabel 3450 1900 1    60   Input ~ 0
 PS0
-Text HLabel 3600 1900 1    60   Input ~ 0
-OSK
 Text HLabel 3750 1900 1    60   Output ~ 0
 SYNC_CLK
 Text HLabel 3900 1900 1    60   Input ~ 0
@@ -1125,4 +1123,8 @@ Wire Wire Line
 Connection ~ 3675 7050
 Wire Wire Line
 	3675 7050 3800 7050
+Text Label 3600 1475 3    60   ~ 0
+DGND
+Wire Wire Line
+	3600 1900 3600 1475
 $EndSCHEMATC

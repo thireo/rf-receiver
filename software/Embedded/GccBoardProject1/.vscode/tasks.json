@@ -1,0 +1,36 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558  C:\\Program Files (x86)\\Atmel\\Studio\\7.0\\
+    // for the documentation about the tasks.json format  -out foo6.txt
+    "version": "2.0.0",
+
+    "tasks": [
+        {
+            "label": "Atmel build",
+            "type": "shell",
+            "command": "atmelstudio.exe",
+            "args": [
+                "GccBoardProject1.atsln",
+                "-build",
+                "debug",
+                "-out",
+                "log.txt"
+            ]
+        },
+        {
+            "label": "Atmel make",
+            "type": "process",
+            "command": "mingw32-make",
+            "args": [
+                "-C",
+                "${workspaceFolder}\\debug\\",
+                "clean",
+                "all",
+                "-s",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

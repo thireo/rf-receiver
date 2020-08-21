@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date "2019-01-20"
 Rev "1"
@@ -107,7 +107,7 @@ U 1 1 5C8EADC1
 P 1000 2625
 F 0 "MH1" H 1100 2676 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1100 2585 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 1000 2625 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1000 2625 50  0001 C CNN
 F 3 "~" H 1000 2625 50  0001 C CNN
 	1    1000 2625
 	1    0    0    -1  
@@ -118,7 +118,7 @@ U 1 1 5C8EAE27
 P 1225 2625
 F 0 "MH2" H 1325 2676 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1325 2585 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 1225 2625 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1225 2625 50  0001 C CNN
 F 3 "~" H 1225 2625 50  0001 C CNN
 	1    1225 2625
 	1    0    0    -1  
@@ -129,7 +129,7 @@ U 1 1 5C8EAE79
 P 1450 2625
 F 0 "MH3" H 1550 2676 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1550 2585 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 1450 2625 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1450 2625 50  0001 C CNN
 F 3 "~" H 1450 2625 50  0001 C CNN
 	1    1450 2625
 	1    0    0    -1  
@@ -140,7 +140,7 @@ U 1 1 5C8EAED7
 P 1650 2625
 F 0 "MH4" H 1750 2676 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1750 2585 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad" H 1650 2625 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1650 2625 50  0001 C CNN
 F 3 "~" H 1650 2625 50  0001 C CNN
 	1    1650 2625
 	1    0    0    -1  
@@ -603,8 +603,6 @@ Wire Wire Line
 	9250 1075 9250 1100
 Wire Wire Line
 	9250 1100 9425 1100
-NoConn ~ 8900 1175
-NoConn ~ 8900 1275
 Text Label 3850 5575 0    50   ~ 0
 SDA
 Text Label 3850 5675 0    50   ~ 0
@@ -995,7 +993,7 @@ F 3 "" H 2575 4775 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2575 4775 2575 4700
+	2575 4775 2575 4735
 $Comp
 L power:-12V #PWR?
 U 1 1 5DB00D93
@@ -1374,4 +1372,80 @@ F 3 "" H 9150 1450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9150 1450 9150 1375
+$Comp
+L Device:C_Small C?
+U 1 1 5E716223
+P 2395 4605
+AR Path="/5C517D7D/5E716223" Ref="C?"  Part="1" 
+AR Path="/5E716223" Ref="C31"  Part="1" 
+F 0 "C31" H 2487 4651 50  0000 L CNN
+F 1 "22uF" H 2487 4560 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2395 4605 50  0001 C CNN
+F 3 "~" H 2395 4605 50  0001 C CNN
+	1    2395 4605
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2575 4475 2395 4475
+Wire Wire Line
+	2395 4475 2395 4505
+Connection ~ 2575 4475
+Wire Wire Line
+	2395 4705 2395 4735
+Wire Wire Line
+	2395 4735 2575 4735
+Connection ~ 2575 4735
+Wire Wire Line
+	2575 4735 2575 4700
+$Comp
+L Device:C_Small C32
+U 1 1 5E733990
+P 2220 4605
+F 0 "C32" V 2190 4635 50  0000 L CNN
+F 1 "100nF" V 2270 4355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2220 4605 50  0001 C CNN
+F 3 "" H 2220 4605 50  0000 C CNN
+	1    2220 4605
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2395 4475 2220 4475
+Wire Wire Line
+	2220 4475 2220 4505
+Connection ~ 2395 4475
+Wire Wire Line
+	2220 4705 2220 4735
+Wire Wire Line
+	2220 4735 2395 4735
+Connection ~ 2395 4735
+$Comp
+L Connector:TestPoint TP20
+U 1 1 5E6E2812
+P 8955 1160
+F 0 "TP20" H 9013 1278 50  0000 L CNN
+F 1 "TestPoint" H 9013 1187 50  0000 L CNN
+F 2 "athir:testpoint_probe" H 9155 1160 50  0001 C CNN
+F 3 "~" H 9155 1160 50  0001 C CNN
+	1    8955 1160
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP21
+U 1 1 5E6E4E81
+P 9000 1260
+F 0 "TP21" H 9058 1378 50  0000 L CNN
+F 1 "TestPoint" H 9058 1287 50  0000 L CNN
+F 2 "athir:testpoint_probe" H 9200 1260 50  0001 C CNN
+F 3 "~" H 9200 1260 50  0001 C CNN
+	1    9000 1260
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 1275 9000 1275
+Wire Wire Line
+	9000 1275 9000 1260
+Wire Wire Line
+	8955 1175 8900 1175
+Wire Wire Line
+	8955 1175 8955 1160
 $EndSCHEMATC

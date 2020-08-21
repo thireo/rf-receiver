@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -543,7 +543,7 @@ Wire Wire Line
 Wire Wire Line
 	3445 4495 3445 4440
 Wire Wire Line
-	3150 4495 3445 4495
+	3150 4495 3300 4495
 Wire Wire Line
 	1705 4755 1705 4750
 Wire Wire Line
@@ -560,9 +560,83 @@ F 3 "~" V 1565 4550 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1665 4550 1705 4550
+	1665 4550 1690 4550
 Wire Wire Line
 	1390 4500 1390 4550
 Wire Wire Line
-	1390 4550 1465 4550
+	1390 4550 1430 4550
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5E5CA4EA
+P 4205 4025
+AR Path="/5C4FD13D/5E5CA4EA" Ref="TP?"  Part="1" 
+AR Path="/5C517D7D/5E5CA4EA" Ref="TP18"  Part="1" 
+F 0 "TP18" H 4263 4145 50  0000 L CNN
+F 1 "GND" H 4263 4054 50  0000 L CNN
+F 2 "athir:testpoint_probe" H 4405 4025 50  0001 C CNN
+F 3 "~" H 4405 4025 50  0001 C CNN
+	1    4205 4025
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E5CA4F4
+P 4205 4065
+AR Path="/5C4FD13D/5E5CA4F4" Ref="#PWR?"  Part="1" 
+AR Path="/5C517D7D/5E5CA4F4" Ref="#PWR011"  Part="1" 
+F 0 "#PWR011" H 4205 3815 50  0001 C CNN
+F 1 "GND" H 4210 3892 50  0000 C CNN
+F 2 "" H 4205 4065 50  0001 C CNN
+F 3 "" H 4205 4065 50  0001 C CNN
+	1    4205 4065
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4205 4025 4205 4065
+$Comp
+L Device:D_Small_ALT D4
+U 1 1 5E614377
+P 1560 4400
+F 0 "D4" H 1560 4195 50  0000 C CNN
+F 1 "D_Small_ALT" H 1560 4286 50  0000 C CNN
+F 2 "athir:SOD128" V 1560 4400 50  0001 C CNN
+F 3 "~" V 1560 4400 50  0001 C CNN
+	1    1560 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1690 4400 1690 4550
+Connection ~ 1690 4550
+Wire Wire Line
+	1690 4550 1705 4550
+Wire Wire Line
+	1460 4400 1430 4400
+Wire Wire Line
+	1430 4400 1430 4550
+Connection ~ 1430 4550
+Wire Wire Line
+	1430 4550 1465 4550
+Wire Wire Line
+	1660 4400 1690 4400
+$Comp
+L Device:CP_Small C33
+U 1 1 5E7102DA
+P 3300 4650
+F 0 "C33" H 3400 4725 50  0000 R CNN
+F 1 "47uF/100uF" H 3675 4575 50  0000 R CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.4" H 3300 4650 50  0001 C CNN
+F 3 "~" H 3300 4650 50  0001 C CNN
+	1    3300 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 4550 3300 4495
+Connection ~ 3300 4495
+Wire Wire Line
+	3300 4495 3445 4495
+Wire Wire Line
+	3300 4750 3300 4795
+Wire Wire Line
+	3300 4795 3185 4795
+Connection ~ 3185 4795
 $EndSCHEMATC
